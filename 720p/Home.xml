@@ -511,6 +511,7 @@
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
 				<animation effect="slide" start="0,0" end="145,0" time="0" condition="!System.HasAddon(script.globalsearch)">Conditional</animation>
+				<visible>!Skin.HasSetting(HideSearch)</visible>
 			</control>
 			<control type="radiobutton" id="608">
 				<colordiffuse>CCFFFFFF</colordiffuse>
@@ -539,7 +540,7 @@
 				<onright>601</onright>
 				<onup>9003</onup>
 				<ondown>9000</ondown>
-				<visible>System.HasAddon(script.globalsearch)</visible>
+				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HideSearch)</visible>
 			</control>
 			<control type="group" id="600">
 				<left>180</left>

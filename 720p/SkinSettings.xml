@@ -477,6 +477,17 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="229">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Hide Search</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideSearch)</onclick>
+					</control>
 				</control>
 				<control type="scrollbar" id="60">
 					<left>1060</left>
