@@ -22,7 +22,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>ContentPanel.png</texture>
 			</control>
-		<!--	<control type="label">
+			<control type="label">
 				<posx>341</posx>
 				<posy>240</posy>
 				<width>600</width>
@@ -36,7 +36,7 @@
 				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
 				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
 				<scroll>true</scroll>
-			</control> -->
+			</control>
 
 			<control type="wraplist" id="727">
 				<visible>Container.Content(Movies) | Container.Content(MusicVideos) | Container.Content(Genres)</visible>
@@ -195,45 +195,15 @@
 				<texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
 				<visible>!Container.Content(MusicVideos)</visible>
 			</control>
-			<control type="grouplist">
-				<description>MPAA Rating Flagging Images</description>
-				<posx>-635</posx>
-				<posy>220</posy>
-				<width>800</width>
-				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
-				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
-				<align>right</align>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<include>VideoFSKFlaggingConditions</include>
-				<visible>Container.Content(Movies)</visible>
-			</control>
-			<control type="grouplist">
-				<description>MPAA Rating Flagging Images</description>
-				<posx>-715</posx>
+			<control type="image">
+            	<description>Rating image</description>
+            	<posx>-60</posx>
 				<posy>230</posy>
-				<width>800</width>
-				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
-				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
-				<align>right</align>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<include>VideoMPAAFlaggingConditions</include>
-				<visible>Container.Content(Movies)</visible>
-			</control>
-			<control type="grouplist">
-				<description>MPAA Rating Flagging Images</description>
-				<posx>-730</posx>
-				<posy>225</posy>
-				<width>800</width>
-				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
-				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
-				<align>right</align>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<include>VideoBBFCFlaggingConditions</include>
-				<visible>Container.Content(Movies)</visible>
-			</control>
+           		<width>199</width>
+            	<height>45</height>
+            	<aspectratio>keep</aspectratio>
+            	<texture>$INFO[listitem.MPAA,flagging/ratings/,.png]</texture>
+        	</control>
 			<control type="image">
 				<posx>240</posx>
 				<posy>205</posy>
@@ -254,7 +224,7 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<label>40035</label>
-			<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(ShowTrailer) + Control.HasFocus(727) | Control.HasFocus(666)</visible>
+			<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(ShowTrailer) + Control.HasFocus(727) | Control.HasFocus(666)</visible>
 		</control>
 		<control type="button" id="666">
 			<width>1</width>
