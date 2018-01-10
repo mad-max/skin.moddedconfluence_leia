@@ -157,6 +157,10 @@
 						<label>24000</label>
 						<label2>31200</label2>
 					</item>
+					<item id="5">
+						<label>MOD-Settings</label>
+						<label2>Customize Confluence</label2>
+					</item>
 				</content>
 			</control>
 			<control type="image">
@@ -477,7 +481,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="229">
+<!--					<control type="radiobutton" id="229">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -487,6 +491,17 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(HideSearch)</onclick>
+					</control> -->
+					<control type="radiobutton" id="230">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>DebugGrid</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
 					</control>
 				</control>
 				<control type="scrollbar" id="60">

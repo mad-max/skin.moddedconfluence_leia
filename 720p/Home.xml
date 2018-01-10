@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000)</onload>
 	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
 	<onunload condition="ControlGroup(9011).HasFocus">SetProperty(MusicDirectLink,True)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
@@ -785,85 +786,90 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
-			<control type="group" id="9001">
-				<depth>DepthMenu-</depth>
-				<left>0</left>
-				<top>70</top>
-				<onup>9000</onup>
-				<ondown>9002</ondown>
-				<control type="grouplist" id="9010">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9010</onleft>
-					<onright>9010</onright>
-					<visible>Container(9000).HasFocus(2)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuVideos</include>
-				</control>
-				<control type="grouplist" id="9016">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9016</onleft>
-					<onright>9016</onright>
-					<visible>Container(9000).HasFocus(10) + !String.IsEmpty(Container(90160).ListItemNoWrap(0).Label)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuMovies</include>
-				</control>
-				<control type="grouplist" id="9017">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9017</onleft>
-					<onright>9017</onright>
-					<visible>Container(9000).HasFocus(11) + !String.IsEmpty(Container(90170).ListItemNoWrap(0).Label)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuTVShows</include>
-				</control>
-				<control type="grouplist" id="9011">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9011</onleft>
-					<onright>9011</onright>
-					<visible>Container(9000).HasFocus(3) + !String.IsEmpty(Container(90110).ListItemNoWrap(0).Label)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuMusic</include>
-				</control>
-				<control type="grouplist" id="9012">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9012</onleft>
-					<onright>9012</onright>
-					<visible>Container(9000).HasFocus(5)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuSystem</include>
-				</control>
-				<control type="grouplist" id="9013">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9013</onleft>
-					<onright>9013</onright>
-					<visible>Container(9000).HasFocus(6)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuPlayDisc</include>
-				</control>
-				<control type="grouplist" id="9014">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9014</onleft>
-					<onright>9014</onright>
-					<visible>Container(9000).HasFocus(12)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuTV</include>
-				</control>
-				<control type="grouplist" id="9015">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9013</onleft>
-					<onright>9013</onright>
-					<visible>Container(9000).HasFocus(4)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuPictures</include>
-				</control>
-				<control type="grouplist" id="9016">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9014</onleft>
-					<onright>9014</onright>
-					<visible>Container(9000).HasFocus(13)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuRadio</include>
-				</control>
+<control type="wraplist" id="9010">
+	<right>330</right>
+	<posx>550</posx>
+	<posy>35</posy>
+	<height>2000</height>
+	<onup>9000</onup>
+	<ondown>9002</ondown>
+	<focusposition>0</focusposition>
+	<animation effect="slide" start="0,0" delay="120" end="0,30" time="150" condition="Control.HasFocus(9010)">Conditional</animation>
+	<scrolltime tween="quadratic" easing="out">300</scrolltime>
+	<orientation>Horizontal</orientation>
+	<itemlayout height="87" width="180">
+		<control type="group">
+			<control type="image">
+				<align>center</align>
+				<height>35</height>
+				<width>180</width>
+				<texture border="5">HomeSubNF.png</texture>
+				<pulseonselect>false</pulseonselect>
 			</control>
+		<control type="label">
+			<textcolor>grey</textcolor>
+			<shadowcolor>shadow</shadowcolor>
+			<label>$INFO[ListItem.Label]</label>
+			<height>35</height>
+			<width>180</width>
+			<textwidth>175</textwidth>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font12</font>
+			<scroll>true</scroll>
+			<pulseonselect>false</pulseonselect>
+		</control>
+	</control>
+	</itemlayout>
+	<focusedlayout height="87" width="180">
+<control type="group">
+	<control type="image">
+		<align>center</align>
+		<height>35</height>
+		<width>180</width>
+		<texture border="5">HomeSubFO.png</texture>
+		<pulseonselect>false</pulseonselect>
+		<visible>Control.HasFocus(9010)</visible>
+	</control>
+		<control type="image">
+			<align>center</align>
+			<height>35</height>
+			<width>180</width>
+			<texture border="5">HomeSubNF.png</texture>
+			<pulseonselect>false</pulseonselect>
+			<visible>!Control.HasFocus(9010)</visible>
+		</control>
+			<control type="label">
+				<textcolor>grey</textcolor>
+				<shadowcolor>shadow</shadowcolor>
+				<align>center</align>
+				<label>$INFO[ListItem.Label]</label>
+				<height>35</height>
+				<width>175</width>
+				<textwidth>180</textwidth>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<scroll>true</scroll>
+				<texturefocus border="5">HomeSubFO.png</texturefocus>
+				<texturenofocus border="5">HomeSubNF.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+			</control>
+		</control>
+	</focusedlayout>
+	<content><include>skinshortcuts-submenu</include></content>
+</control>
+<control type="image">
+	<posx>520</posx>
+	<posy>35</posy>
+	<width>35</width>
+	<height>35</height>
+	<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+	<animation effect="slide" start="0,0" delay="120" end="0,30" time="150" condition="Control.HasFocus(9010)">Conditional</animation>
+	<visible>Container(9010).HasFocus(1) | Container(9010).HasFocus(2) | Container(9010).HasFocus(3) | Container(9010).HasFocus(4) | Container(9010).HasFocus(5) | Container(9010).HasFocus(6) | Container(9010).HasFocus(7)</visible>
+</control>
 			<control type="image">
 				<left>-100</left>
 				<top>0</top>
@@ -878,7 +884,7 @@
 				<height>6</height>
 				<texture>HomeOverlay1.png</texture>
 			</control>
-			<control type="fixedlist" id="9000">
+			<control type="wraplist" id="9000">
 				<left>-110</left>
 				<top>5</top>
 				<width>1500</width>
@@ -887,7 +893,7 @@
 				<onright>9000</onright>
 				<onup condition="System.HasAddon(script.globalsearch)">608</onup>
 				<onup condition="!System.HasAddon(script.globalsearch)">603</onup>
-				<ondown>9001</ondown>
+				<ondown>9010</ondown>
 				<pagecontrol></pagecontrol>
 				<scrolltime>300</scrolltime>
 				<focusposition>2</focusposition>
@@ -961,93 +967,7 @@
 					</control>
 				</focusedlayout>
 				<content>
-					<item id="7">
-						<label>31950</label>
-						<onclick condition="!String.IsEmpty(Weather.Plugin)">ActivateWindow(Weather)</onclick>
-						<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
-					</item>
-					<item id="4">
-						<label>31951</label>
-						<onclick>ActivateWindow(Pictures)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
-					</item>
-					<item id="14">
-						<label>31001</label>
-						<onclick>ActivateWindow(Games)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>System.GetBool(gamesgeneral.enable)</visible>
-					</item>
-					<item id="13">
-						<label>31960</label>
-						<onclick>ActivateWindow(RadioChannels)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>PVR.HasRadioChannels</visible>
-					</item>
-					<item id="12">
-						<label>31952</label>
-						<onclick>ActivateWindow(TVChannels)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>PVR.HasTVChannels</visible>
-					</item>
-					<item id="2">
-						<label>31953</label>
-						<onclick condition="String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
-						<onclick condition="!String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
-					</item>
-					<item id="10">
-						<label>31954</label>
-						<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible>
-					</item>
-					<item id="11">
-						<label>31955</label>
-						<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)</visible>
-					</item>
-					<item id="3">
-						<label>31956</label>
-						<onclick condition="String.IsEqual(Window.Property(MusicDirectLink),True)">ActivateWindow(Music)</onclick>
-						<onclick condition="!String.IsEqual(Window.Property(MusicDirectLink),True)">ActivateWindow(Music,root)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
-					</item>
-					<item id="1">
-						<label>31957</label>
-						<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
-						<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-					</item>
-					<item id="6">
-						<label>31958</label>
-						<onclick>PlayDVD()</onclick>
-						<icon></icon>
-						<thumb></thumb>
-						<visible>System.HasMediaDVD</visible>
-					</item>
-					<item id="5">
-						<label>31959</label>
-						<onclick>ActivateWindow(Settings)</onclick>
-						<icon></icon>
-						<thumb></thumb>
-					</item>
+					<include>skinshortcuts-mainmenu</include>
 				</content>
 			</control>
 			<control type="image">
@@ -1163,7 +1083,7 @@
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>21</onleft>
 				<onright>21</onright>
-				<onup>9002</onup>
+				<onup>9010</onup>
 				<ondown>9003</ondown>
 			</control>
 			<control type="image">
@@ -1188,7 +1108,7 @@
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>20</onleft>
 				<onright>20</onright>
-				<onup>9002</onup>
+				<onup>9010</onup>
 				<ondown>9003</ondown>
 			</control>
 			<control type="image">
