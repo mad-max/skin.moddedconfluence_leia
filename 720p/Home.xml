@@ -786,44 +786,66 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
-<control type="list" id="9010">
-	<right>390</right>
-	<posx>400</posx>
-	<posy>80</posy>
+<control type="wraplist" id="9010">
+	<right>330</right>
+	<posx>550</posx>
+	<posy>70</posy>
 	<height>2000</height>
 	<onup>9000</onup>
 	<ondown>9002</ondown>
-	<focusposition>3</focusposition>
-	<pagecontrol />
+	<focusposition>0</focusposition>
 	<scrolltime tween="quadratic" easing="out">300</scrolltime>
 	<orientation>Horizontal</orientation>
-	<itemlayout height="87" width="100">
+	<itemlayout height="87" width="180">
+		<control type="group">
+			<control type="image">
+				<align>center</align>
+				<height>35</height>
+				<width>180</width>
+				<texture border="5">HomeSubNF.png</texture>
+				<pulseonselect>false</pulseonselect>
+			</control>
 		<control type="label">
 			<textcolor>grey</textcolor>
 			<shadowcolor>shadow</shadowcolor>
 			<label>$INFO[ListItem.Label]</label>
 			<height>35</height>
 			<width>180</width>
-			<textwidth>195</textwidth>
+			<textwidth>175</textwidth>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
-			<focusedcolor>white</focusedcolor>
 			<scroll>true</scroll>
-			<texturefocus border="5">HomeSubFO.png</texturefocus>
-			<texturenofocus border="5">HomeSubNF.png</texturenofocus>
 			<pulseonselect>false</pulseonselect>
 		</control>
+	</control>
 	</itemlayout>
-	<focusedlayout height="87" width="100">
+	<focusedlayout height="87" width="180">
+<control type="group">
+	<control type="image">
+		<align>center</align>
+		<height>35</height>
+		<width>180</width>
+		<texture border="5">HomeSubFO.png</texture>
+		<pulseonselect>false</pulseonselect>
+		<visible>Control.HasFocus(9010)</visible>
+	</control>
+		<control type="image">
+			<align>center</align>
+			<height>35</height>
+			<width>180</width>
+			<texture border="5">HomeSubNF.png</texture>
+			<pulseonselect>false</pulseonselect>
+			<visible>!Control.HasFocus(9010)</visible>
+		</control>
 			<control type="label">
-				<textcolor>white</textcolor>
+				<textcolor>grey</textcolor>
 				<shadowcolor>shadow</shadowcolor>
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
 				<height>35</height>
-				<width>180</width>
-				<textwidth>195</textwidth>
+				<width>175</width>
+				<textwidth>180</textwidth>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -834,8 +856,16 @@
 				<texturenofocus border="5">HomeSubNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 			</control>
+		</control>
 	</focusedlayout>
 	<content><include>skinshortcuts-submenu</include></content>
+</control>
+<control type="image">
+	<posx>520</posx>
+	<posy>70</posy>
+	<width>35</width>
+	<height>35</height>
+	<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
 </control>
 			<control type="image">
 				<left>-100</left>
@@ -851,7 +881,7 @@
 				<height>6</height>
 				<texture>HomeOverlay1.png</texture>
 			</control>
-			<control type="fixedlist" id="9000">
+			<control type="wraplist" id="9000">
 				<left>-110</left>
 				<top>5</top>
 				<width>1500</width>
@@ -1050,7 +1080,7 @@
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>21</onleft>
 				<onright>21</onright>
-				<onup>9002</onup>
+				<onup>9010</onup>
 				<ondown>9003</ondown>
 			</control>
 			<control type="image">
@@ -1075,7 +1105,7 @@
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>20</onleft>
 				<onright>20</onright>
-				<onup>9002</onup>
+				<onup>9010</onup>
 				<ondown>9003</ondown>
 			</control>
 			<control type="image">
