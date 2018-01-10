@@ -866,7 +866,7 @@
 	<width>35</width>
 	<height>35</height>
 	<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-	<visible>Container(9010).HasFocus(1) | Container(9010).HasFocus(2)</visible>
+	<visible>Container(9010).HasFocus(1) | Container(9010).HasFocus(2) | Container(9010).HasFocus(3) | Container(9010).HasFocus(4) | Container(9010).HasFocus(5) | Container(9010).HasFocus(6) | Container(9010).HasFocus(7)</visible>
 </control>
 			<control type="image">
 				<left>-100</left>
