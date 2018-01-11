@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000)</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
@@ -481,27 +482,27 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-<!--					<control type="radiobutton" id="229">
+					<control type="button" id="229">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>Hide Search</label>
+						<label>Menu</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(HideSearch)</onclick>
-					</control> -->
+						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+					</control>
 					<control type="radiobutton" id="230">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>DebugGrid</label>
+						<label>ResetMenu</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
+						<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 					</control>
 				</control>
 				<control type="scrollbar" id="60">
