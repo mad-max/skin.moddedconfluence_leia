@@ -10,17 +10,559 @@
 			<width>1280</width>
 			<height>720</height>
 		</control>
+		<control type="group">
+			<posx>-35</posx>
+			<posy>-15</posy>
+			<visible>Player.HasAudio</visible>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>150</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7700</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>300</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>8000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>450</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>600</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>750</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5500</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>900</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1050</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1200</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6600</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>150</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6500</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>150</posx>
+				<posy>150</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>300</posx>
+				<posy>150</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>450</posx>
+				<posy>150</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>600</posx>
+				<posy>150</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>750</posx>
+				<posy>150</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5700</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>900</posx>
+				<posy>150</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4400</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1050</posx>
+				<posy>150</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6800</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1200</posx>
+				<posy>150</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7800</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>300</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>8100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>150</posx>
+				<posy>300</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4900</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>300</posx>
+				<posy>300</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>450</posx>
+				<posy>300</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4500</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>600</posx>
+				<posy>300</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>750</posx>
+				<posy>300</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6400</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>900</posx>
+				<posy>300</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>8300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1050</posx>
+				<posy>300</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7500</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1200</posx>
+				<posy>300</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6900</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>450</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>150</posx>
+				<posy>450</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5800</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>300</posx>
+				<posy>450</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5600</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>450</posx>
+				<posy>450</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>600</posx>
+				<posy>450</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4700</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>750</posx>
+				<posy>450</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4800</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>900</posx>
+				<posy>450</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5400</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1050</posx>
+				<posy>450</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1200</posx>
+				<posy>450</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>600</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7600</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>150</posx>
+				<posy>600</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>300</posx>
+				<posy>600</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>5900</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>450</posx>
+				<posy>600</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>600</posx>
+				<posy>600</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>8200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>750</posx>
+				<posy>600</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>6700</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>900</posx>
+				<posy>600</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>4600</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1050</posx>
+				<posy>600</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7900</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<posx>1200</posx>
+				<posy>600</posy>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+				<colordiffuse>88FFFFFF</colordiffuse>
+				<timeperimage>7400</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+		</control>
 		<control type="image">
-			<description>Fanart Image for Artist</description>
-			<left>0</left>
-			<top>0</top>
+			<posx>0</posx>
+			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Player.Art(fanart)]</texture>
-			<colordiffuse>AAFFFFFF</colordiffuse>
-			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
-			<fadetime>600</fadetime>
+			<texture background="true">cdwallgrid.png</texture>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>Player.HasAudio</visible>
 		</control>
 		<!-- media infos -->
 		<control type="group">
@@ -90,7 +632,7 @@
 				<posy>460</posy>
 				<animation effect="slide" start="-100" end="0" time="900" tween="cubic" easing="out" delay="1000">WindowOpen</animation>
 				<animation type="WindowClose">
-					<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0"/>
+					<effect type="slide" start="0" end="-100" time="800" tween="cubic" easing="in" delay="0"/>
 					<effect type="fade" start="100" end="0" time="1300"/>
 					<condition type="!Player.Playing"/>
 				</animation>
@@ -168,29 +710,7 @@
 						<texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
 						<visible>!Player.ChannelPreviewActive</visible>
 					</control>
-					<control type="group">
-						<description>Rating</description>
-						<width>172</width>
-						<height>29</height>
-						<control type="image">
-							<description>rating back</description>
-							<left>0</left>
-							<top>0</top>
-							<width>172</width>
-							<height>29</height>
-							<texture border="5">flagging/blank.png</texture>
-						</control>
-						<control type="image">
-							<description>User Rating</description>
-							<left>2</left>
-							<top>5</top>
-							<width>168</width>
-							<height>21</height>
-							<texture fallback="ratings/0.png">$INFO[MusicPlayer.UserRating,ratings/,.png]</texture>
-						</control>
-					</control>
 				</control>
-
 				<control type="grouplist">
 					<left>20</left>
 					<top>60</top>
