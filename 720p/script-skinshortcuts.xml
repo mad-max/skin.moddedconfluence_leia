@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">211</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="image">
+			<left>0</left>
+			<top>100r</top>
+			<width>1280</width>
+			<height>100</height>
+			<texture>floor.png</texture>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<left>20</left>
+			<top>3</top>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<left>65</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>Customise main menu</label>
+				<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>Customise submenu</label>
+				<visible>!StringCompare(Window.Property(groupname),mainmenu)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<left>90</left>
+			<top>30</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+				<effect type="fade" start="0" end="100" time="300"/>
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+				<effect type="fade" start="100" end="0" time="300"/>
+			</animation>
+			<control type="image">
+				<left>5</left>
+				<top>5</top>
+				<width>1090</width>
+				<height>630</height>
+				<texture border="15">ContentPanel.png</texture>
+			</control>
+			<control type="image">
+				<left>5</left>
+				<top>625</top>
+				<width>1090</width>
+				<height>64</height>
+				<texture border="15">ContentPanelMirror.png</texture>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<left>980</left>
+				<top>11</top>
+				<width>64</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<left>30</left>
+				<top>15</top>
+				<width>220</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>Confluence_Logo.png</texture>
+			</control>
+			<control type="list" id="211">
+				<left>10</left>
+				<top>90</top>
+				<width>260</width>
+				<height>481</height>
+				<onleft>301</onleft>
+				<onright>9010</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="54" width="260">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>260</width>
+						<height>55</height>
+						<texture border="5">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<width>380</width>
+						<height>55</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font24_title</font>
+						<textcolor>grey3</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<textoffsetx>15</textoffsetx>
+					</control>
+				</itemlayout>
+				<focusedlayout height="54" width="260">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>260</width>
+						<height>55</height>
+						<texture border="5">MenuItemFO.png</texture>
+					</control>
+					<control type="label">
+						<width>380</width>
+						<height>55</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font24_title</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<textoffsetx>15</textoffsetx>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="button" id="301">
+				<description>Add new</description>
+				<left>10</left>
+				<top>562</top>
+				<height>60</height>
+				<width>260</width>
+				<aligny>center</aligny>
+				<align>center</align>
+				<font>font13caps</font>
+				<textcolor>selected</textcolor>
+				<focusedcolor>selected</focusedcolor>
+				<texturefocus border="5">MenuItemFO.png</texturefocus>
+				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onright>9001</onright>
+				<onup>211</onup>
+				<ondown>211</ondown>
+			</control>
+			<control type="image">
+				<left>268</left>
+				<top>10</top>
+				<width>790</width>
+				<height>618</height>
+				<texture border="5">black-back2.png</texture>
+			</control>
+			<control type="image">
+				<left>268</left>
+				<top>10</top>
+				<width>790</width>
+				<height>52</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<left>300</left>
+				<top>20</top>
+				<width>726</width>
+				<height>30</height>
+				<font>font16</font>
+				<label>$INFO[Container(211).ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="group" id="9010">
+				<control type="grouplist" id="9001">
+					<left>290</left>
+					<top>60</top>
+					<width>750</width>
+					<height>530</height>
+					<itemgap>-1</itemgap>
+					<onleft>211</onleft>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<control type="label">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>Anpassen des Hauptmenüpunktes</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="button" id="305">
+						<description>Edit Label Button</description>
+						<align>left</align>
+						<width>750</width>
+						<height>40</height>
+						<font>default-font</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<label>Beschriftung</label>
+					</control>
+					<control type="button" id="401">
+						<description>Choose shortcut</description>
+						<align>left</align>
+						<width>750</width>
+						<height>40</height>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<label>Aktion wählen (vordefiniert)</label>
+					</control>
+					<control type="button" id="307">
+						<description>Edit action</description>
+						<align>left</align>
+						<width>750</width>
+						<height>40</height>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<label>Benutzerdefinierten Befehl eingeben</label>
+					</control>
+					<control type="label" id="319">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>Anpassung des Submenü</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>!IsEmpty(Window.Property(additionalDialog)</visible>
+					</control>
+					<control type="button" id="405">
+						<description>Edit submenu</description>
+						<align>left</align>
+						<width>750</width>
+						<height>40</height>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>!IsEmpty(Window.Property(additionalDialog)</visible>
+						<label>Sub-Menü anpassen</label>
+					</control>
+					<control type="button" id="500">
+						<description>Edit favourites</description>
+						<align>left</align>
+						<width>750</width>
+						<height>40</height>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>!StringCompare(Window.Property(groupname), mainmenu)</visible>
+						<onclick>SetProperty(level, 1)</onclick>
+						<onclick>SendClick(405)</onclick>
+						<label>Favoriten wählen (unterhalb des Menü)</label>
+					</control>
+					<control type="button" id="310">
+						<description>Edit thumbnail Button</description>
+						<align>left</align>
+						<width>750</width>
+						<height>40</height>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<label>32045</label>
+					</control>
+					<control type="label" id="320">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>Widgets</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="group" id="440">
+						<width>750</width>
+						<height>40</height>
+						<visible>!StringCompare(Window.Property(groupname), mainmenu)</visible>
+						<control type="button" id="312">
+							<description>Choose widget</description>
+							<left>0</left>
+							<top>0</top>
+							<align>left</align>
+							<height>40</height>
+							<width>750</width>
+							<onup>500</onup>
+							<ondown>303</ondown>
+							<onleft>9001</onleft>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<label>Widget auswählen</label>
+						</control>
+						<control type="label" id="311">
+							<description>Selected widget</description>
+							<left>375</left>
+							<top>0</top>
+							<align>right</align>
+							<height>40</height>
+							<width>375</width>
+						<textcolor>grey2</textcolor>
+						</control>
+					</control>
+					<control type="label" id="318">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>Positionierung des Hauptmenüpunktes</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="button" id="303">
+						<description>Move Up</description>
+						<align>left</align>
+						<width>750</width>
+						<height>40</height>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Verschiebe Menüpunkt nach vorne</label>
+					</control>
+					<control type="button" id="304">
+						<description>Move Down</description>
+						<align>left</align>
+						<width>750</width>
+						<height>40</height>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Verschiebe Menüpunkt nach hinten</label>
+					</control>
+					<control type="button" id="302">
+						<description>Delete Button</description>
+						<align>left</align>
+						<width>750</width>
+						<height>40</height>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Menüpunkt löschen</label>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<include>Clock</include>
+	</controls>
+</window>
