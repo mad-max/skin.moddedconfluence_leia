@@ -11,6 +11,7 @@
 			<height>100</height>
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
+			<visible>!Skin.HasSetting(NoFloor)</visible>
 		</control>
 		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_system" />
@@ -1032,6 +1033,30 @@
 						<label2>$INFO[Skin.String(CDWall_Folder_Path)]</label2>
 						<onclick>Skin.SetPath(CDWall_Folder_Path)</onclick>
 						<visible>Skin.HasSetting(CDWallNoVisualisation)</visible>
+				</control>
+				<control type="radiobutton" id="504">
+					<width>750</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>ToggleFloor</label>
+					<texturefocus>MenuItemFO.png</texturefocus>
+					<texturenofocus>menuItemNF.png</texturenofocus>
+					<onclick>Skin.ToggleSetting(NoFloor)</onclick>
+					<selected>Skin.HasSetting(NoFloor)</selected>
+				</control>
+				<control type="radiobutton" id="505">
+					<width>750</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>LowerMenu</label>
+					<texturefocus>MenuItemFO.png</texturefocus>
+					<texturenofocus>menuItemNF.png</texturenofocus>
+					<onclick>Skin.ToggleSetting(LowerMenu)</onclick>
+					<selected>Skin.HasSetting(LowerMenu)</selected>
 				</control>
 				</control>
 				<control type="scrollbar" id="60">
