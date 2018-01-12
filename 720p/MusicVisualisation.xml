@@ -10,10 +10,22 @@
 			<width>1280</width>
 			<height>720</height>
 		</control>
+		<control type="image">
+			<description>Fanart Image for Artist</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart) + !Skin.HasSetting(CDWallNoVisualisation)</visible>
+			<fadetime>600</fadetime>
+		</control>
 		<control type="group">
 			<posx>-35</posx>
 			<posy>-15</posy>
-			<visible>Player.HasAudio</visible>
+			<visible>Player.HasAudio + Skin.HasSetting(CDWallNoVisualisation)</visible>
 			<control type="multiimage">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -562,7 +574,7 @@
 			<height>720</height>
 			<texture background="true">cdwallgrid.png</texture>
 			<colordiffuse>88FFFFFF</colordiffuse>
-			<visible>Player.HasAudio</visible>
+			<visible>Player.HasAudio + Skin.HasSetting(CDWallNoVisualisation)</visible>
 		</control>
 		<!-- media infos -->
 		<control type="group">
