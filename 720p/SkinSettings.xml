@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000)</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
@@ -10,6 +11,7 @@
 			<height>100</height>
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
+			<visible>!Skin.HasSetting(NoFloor)</visible>
 		</control>
 		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_system" />
@@ -481,28 +483,29 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-<!--					<control type="radiobutton" id="229">
+					<control type="button" id="229">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>Hide Search</label>
+						<label>Menu</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(HideSearch)</onclick>
-					</control> -->
+						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+					</control>
 					<control type="radiobutton" id="230">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>DebugGrid</label>
+						<label>ResetMenu</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
+						<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 					</control>
+
 				</control>
 				<control type="scrollbar" id="60">
 					<left>1060</left>
@@ -970,6 +973,107 @@
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<visible>Container(9000).Hasfocus(4)</visible>
+				</control>
+				<control type="grouplist" id="9005">
+					<visible>Container(9000).Hasfocus(5)</visible>
+					<left>290</left>
+					<top>60</top>
+					<width>750</width>
+					<height>530</height>
+					<itemgap>-1</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9005</onup>
+					<ondown>9005</ondown>
+					<control type="label" id="500">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>MOD-Settings</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="501">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>DummyButton</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick></onclick>
+						<selected></selected>
+					</control>
+					<control type="radiobutton" id="502">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>EnableCDWall</label>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>menuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(CDWallNoVisualisation)</onclick>
+						<selected>Skin.HasSetting(CDWallNoVisualisation)</selected>
+					</control>
+						<control type="button" id="503">
+						<description>CD Wall Picture Path</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>menuItemNF.png</texturenofocus>
+						<label>CDWallImagePath</label>
+						<label2>$INFO[Skin.String(CDWall_Folder_Path)]</label2>
+						<onclick>Skin.SetPath(CDWall_Folder_Path)</onclick>
+						<visible>Skin.HasSetting(CDWallNoVisualisation)</visible>
+				</control>
+				<control type="radiobutton" id="504">
+					<width>750</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>ToggleFloor</label>
+					<texturefocus>MenuItemFO.png</texturefocus>
+					<texturenofocus>menuItemNF.png</texturenofocus>
+					<onclick>Skin.ToggleSetting(NoFloor)</onclick>
+					<selected>Skin.HasSetting(NoFloor)</selected>
+				</control>
+				<control type="radiobutton" id="505">
+					<width>750</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>LowerMenu</label>
+					<texturefocus>MenuItemFO.png</texturefocus>
+					<texturenofocus>menuItemNF.png</texturenofocus>
+					<onclick>Skin.ToggleSetting(LowerMenu)</onclick>
+					<selected>Skin.HasSetting(LowerMenu)</selected>
+				</control>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>1060</left>
+					<top>60</top>
+					<width>25</width>
+					<height>530</height>
+					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<onleft>9005</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<visible>Container(9000).Hasfocus(5)</visible>
 				</control>
 			</control>
 		</control>
