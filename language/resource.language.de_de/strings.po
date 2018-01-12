@@ -579,3 +579,11 @@ msgstr "OPTIONEN"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RADIO"
+
+msgctxt "#40000"
+msgid "Activate coverwall in music vizualisation"
+msgstr "Aktiviere Coverwall in Musik-Visualisierung"
+
+msgctxt "#40001"
+msgid "Browse for folder including album covers"
+msgstr "Pfad für Albencover wählen:"

@@ -1014,7 +1014,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>EnableCDWall</label>
+						<label>$LOCALIZE[40000]</label>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>menuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(CDWallNoVisualisation)</onclick>
@@ -1029,7 +1029,7 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>menuItemNF.png</texturenofocus>
-						<label>CDWallImagePath</label>
+						<label>$LOCALIZE[40001]</label>
 						<label2>$INFO[Skin.String(CDWall_Folder_Path)]</label2>
 						<onclick>Skin.SetPath(CDWall_Folder_Path)</onclick>
 						<visible>Skin.HasSetting(CDWallNoVisualisation)</visible>
