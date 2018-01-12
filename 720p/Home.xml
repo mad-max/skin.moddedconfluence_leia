@@ -55,6 +55,7 @@
 			<width>1320</width>
 			<height>90</height>
 			<texture>floor.png</texture>
+			<visible>!Skin.HasSetting(NoFloor)</visible>
 			<animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
 			<animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
